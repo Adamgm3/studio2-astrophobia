@@ -80,7 +80,7 @@ namespace AstrophobiaFirst
                         Console.WriteLine("\nlook: This command is used to look around the room you are currently in, to help you with your surroundings, \nit may also show any items found in said room.");
                         Console.WriteLine("\nleave: Used to leave the current room you are in, assuming said room is linked to the hallway.");
                         Console.WriteLine("\nTo pick up any items that can be found in the room you are currently in, you will likely answer in yes or no. \nYou will also have to write which slot the item fills.");
-                        Console.WriteLine("\nmenu: this command will bring up up the ingame menu, and with it, a few more options for the player, \nsuch as restarting exiting the game, going to the main menu etc...");
+                        Console.WriteLine("\nmenu: this command will bring up up the in game menu, and with it, a few more options for the player, \nsuch as restarting exiting the game, going to the main menu etc...");
                         Console.WriteLine("\nUse a rooms name while in the hallway to go to the room you have typed (e.g. typing dorm goes to the Dorm room).");
                         Console.WriteLine("\ninventory: This is used to access your inventory and see what slots are free and full.");
                         Console.WriteLine("\nskip: This is used to skip any story if you don't want to read or you have already read.");
@@ -431,7 +431,7 @@ namespace AstrophobiaFirst
                 case "STATS":
                     {
                         ShipStats(ref oxygenLevel, reactorCore);
-                        ShipSystems();
+                        //ShipSystems();
                         Bridge(ref torch, dormRoomCount, oxygenLevel, reactorCore,  power);
                         break;
                     }
@@ -547,7 +547,7 @@ namespace AstrophobiaFirst
                     ShipComputer(ref torch, dormRoomCount, oxygenLevel, reactorCore,  power);
                     break;
                 case "2":
-                    ShipSystems();
+                    //ShipSystems();
                     ShipComputer(ref torch, dormRoomCount, oxygenLevel, reactorCore,  power);
                     break;
                 case "3":
