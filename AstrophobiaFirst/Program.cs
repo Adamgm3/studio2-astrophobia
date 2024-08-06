@@ -124,14 +124,14 @@ namespace AstrophobiaFirst
             Console.WriteLine();
             Console.WriteLine(Border);
             Console.WriteLine("*\t\t  <Press>\t\t *");
-            Console.WriteLine("* (1) To Resume   \t\t\t *\n* (2) If you wish to Restart\t\t *\n* (3) To go to the Main Menu\t\t *\n* (4) If you would like to Exit the game *");
+            Console.WriteLine("* (1) To Resume   \t\t\t *\n* (2) If you wish to Restart\t\t *\n* (3) To go to the Main Menu\t\t *\n* (4) If you would like to Exit the game *\n* (5) Help!");
             Console.WriteLine(Border);
-            string Input = Console.ReadLine();
+            int Input = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
 
             switch (Input)
             {
-                case "1":
+                case 1:
                     if (currentRoom == "Dorm")
                     {
                         Dorm(ref torch, dormRoomCount, oxygenLevel, reactorCore,  power);
@@ -145,16 +145,19 @@ namespace AstrophobiaFirst
                         Bridge(ref torch, dormRoomCount, oxygenLevel, reactorCore,  power);
                     }
                     break;
-                case "2":
+                case 2:
                     {
                         Intro(ref torch, oxygenLevel, reactorCore,  power);
                         break;
                     }
-                case "3":
+                case 3:
                     Mainmenu(ref torch, oxygenLevel, reactorCore,  power);
                     break;
-                case "4":
+                case 4:
                     GameEnd();
+                    break;
+                case 5:
+                    Help(ref torch, oxygenLevel, reactorCore, power);
                     break;
             }
         }
